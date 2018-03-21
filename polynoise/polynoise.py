@@ -30,11 +30,3 @@ def arPolyNoise(geoObject, maxDisplacement):
         meshFn.updateSurface()
     except: raise
 
-# start the timer and add the noise
-timeStart = time.clock()
-# create a sphere and add noise
-sphere = cmds.polySphere(radius=1, subdivisionsX=200, subdivisionsY=200)
-arPolyNoise(sphere[0], 0.02)
-# stop the timer
-timeStop = time.clock()
-print('Execution time: %s seconds.'%(timeStop-timeStart))
